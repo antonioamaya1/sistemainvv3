@@ -3,6 +3,7 @@ package com.inventario.inventarioapp.controllers;
 import java.util.List;
 import java.util.Optional;
 
+
 import com.inventario.inventarioapp.models.entities.Producto;
 import com.inventario.inventarioapp.models.services.ProductoServiceImpl;
 
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * ClienteController
  */
+
 @RestController
 @RequestMapping("api/productos")
 public class ProductoController {
@@ -24,6 +26,7 @@ public class ProductoController {
     @Autowired
     private ProductoServiceImpl productoService;
 
+   
     @RequestMapping(value="/", method = RequestMethod.GET)
     public List<Producto> getList(){
         List<Producto> productos = productoService.findAll();
